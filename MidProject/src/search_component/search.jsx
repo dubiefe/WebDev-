@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './search.css'
+import search_logo from '../assets/search.svg'
 import Series_Picture from '../series_picture_component/series_picture';
 
 function Search(props) {
@@ -46,7 +47,10 @@ function Search(props) {
     return (
         <>
             <div id='search_container'>
-              <input type="text" value={searchField} onChange={changeSearchField} onKeyDown={handleKeyPress} placeholder='search for a series'/>
+              <div id='search_input_container'>
+                <input type="text" value={searchField} onChange={changeSearchField} onKeyDown={handleKeyPress} placeholder='search for a series'/>
+                <img src={search_logo} alt="search_logo" onClick={() => {setSearchTriggered(true)}} />
+              </div>
               <div id='result_container'>
                   {allSeries ? (
                     allSeries.map((series) => {
