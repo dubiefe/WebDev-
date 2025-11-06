@@ -5,6 +5,7 @@ function Series_Picture(props) {
 
     const [ seriesData, setSeriesData ] = useState();
 
+    // Fetch data for the series
     useEffect(() => {
         const fetchData = async () => {
             let resObj = await fetch("https://api.tvmaze.com/lookup/shows?thetvdb=" + props.series_id);
@@ -22,16 +23,14 @@ function Series_Picture(props) {
         fetchData();
     }, []);
 
-    if(!seriesData) return null;
-
-    if(!seriesData.image) return null;
+    if(!seriesData || !seriesData.image) return null;
 
     return (
         <>
             <div id='series_picture_container'>
                 <img src={seriesData.image.original}></img>
-                <button>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <button onClick={props.handleClickFavorite}>
+                    <svg id='icon_btn_favorite' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill={props.isFavorite ? "lightcoral" : "gray"} className="bi bi-heart-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
                     </svg>
                 </button>

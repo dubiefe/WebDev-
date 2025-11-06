@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import './search.css'
 import Series_Picture from '../series_picture_component/series_picture';
 
-function Search() {
+function Search(props) {
 
     const [ allSeries, setAllSeries ] = useState();
     const [ searchField, setSearchField ] = useState("");
@@ -52,7 +52,7 @@ function Search() {
                     allSeries.map((series) => {
                         return(
                           <>
-                            {series.show.externals.thetvdb && <Series_Picture key={series.show.id} series_id={series.show.externals.thetvdb}/>}
+                            {series.show.externals.thetvdb && <Series_Picture key={series.show.id} series_id={String(series.show.externals.thetvdb)} isFavorite={props.favorites.includes(String(series.show.externals.thetvdb))} handleClickFavorite={() => props.handleClickFavorite(String(series.show.externals.thetvdb))}/>}
                           </>
                         )
                     })
