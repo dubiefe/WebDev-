@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import './App.css'
 import Search from './search_component/search'
+import Favorites from './favorites_component/favorites';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
     function handleClickFavorite(id) {
         if (!favorites.includes(id)) {
             // add favorite
-            setFavorites(prev => [id, ...prev])
+            setFavorites(prev => [...prev, id])
         } else {
             // Delete favorite
             setFavorites(prev => prev.filter(item => item !== id))
@@ -30,6 +31,7 @@ function App() {
 
     return (
       <>
+        <Favorites favorites={favorites} handleClickFavorite={handleClickFavorite}/>
         <Search favorites={favorites} handleClickFavorite={handleClickFavorite}/>
       </>
     )

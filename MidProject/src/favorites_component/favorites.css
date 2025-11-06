@@ -1,0 +1,22 @@
+#favorites_container {
+    width: 20%;
+    height: 100%;
+    background-color: red;
+    overflow: auto;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+#favorites_container h2 {
+    margin: 0;
+}
+
+#favorites_details_container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2vh;
+    justify-content: space-between;
+}

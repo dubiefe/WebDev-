@@ -4,6 +4,7 @@
     align-items: center;
     gap: 2vh;
     width: 50%;
+    padding: 2vh;
 }
 
 #search_input_container {

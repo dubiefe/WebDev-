@@ -56,7 +56,7 @@ function Search(props) {
                     allSeries.map((series) => {
                         return(
                           <>
-                            {series.show.externals.thetvdb && <Series_Picture key={series.show.id} series_id={String(series.show.externals.thetvdb)} isFavorite={props.favorites.includes(String(series.show.externals.thetvdb))} handleClickFavorite={() => props.handleClickFavorite(String(series.show.externals.thetvdb))}/>}
+                            {series.show.externals.thetvdb && <Series_Picture key={series.show.id} displayFavBtn={true} series_id={String(series.show.externals.thetvdb)} isFavorite={props.favorites.includes(String(series.show.externals.thetvdb))} handleClickFavorite={() => props.handleClickFavorite(String(series.show.externals.thetvdb))}/>}
                           </>
                         )
                     })
