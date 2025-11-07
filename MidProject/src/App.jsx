@@ -3,6 +3,7 @@ import { use, useEffect, useState } from 'react';
 import './App.css'
 import Search from './search_component/search'
 import Favorites from './favorites_component/favorites';
+import Series_Details from './series_details_component/series_details';
 
 function App() {
 
@@ -43,7 +44,7 @@ function App() {
       <>
         <Favorites favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries}/>
         <Search favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries}/>
-        {displaySeries && <p>test</p>}
+        {displaySeries && <Series_Details series_id={displayedSeriesId} isFavorite={favorites.includes(displayedSeriesId)} handleClickFavorite={handleClickFavorite}/>}
       </>
     )
 }

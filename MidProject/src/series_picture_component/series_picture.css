@@ -17,32 +17,3 @@
     border-radius: 10px;
     cursor: pointer;
 }
-
-#series_picture_container button {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 0;
-    top: 0;
-    background-color: white;
-    width: 35px;
-    height: 35px;
-    border: none;
-    border-radius: 17.5px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-#series_picture_container button svg {
-    width: 80%;
-    height: 80%;
-    padding-top: 2px;
-}
-
-#series_picture_container button svg:hover {
-    width: 80%;
-    height: 80%;
-    padding-top: 2px;
-    fill: lightcoral;
-}
