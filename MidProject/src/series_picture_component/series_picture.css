@@ -2,6 +2,13 @@
     width: 150px;
     height: 210px;
     position: relative;
+    border-radius: 10px;
+    margin: 2px;
+}
+
+#series_picture_container:hover {
+    border: 2px solid white;
+    margin: 0;
 }
 
 #series_picture_container img {
