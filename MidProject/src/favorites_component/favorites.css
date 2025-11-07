@@ -16,10 +16,11 @@
 #favorites_details_container {
     width: 90%;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 30% 30% 30%;
     grid-gap: 1vh;
     justify-content: space-between;
     overflow-y: scroll;
+    overflow-x: hidden;
     padding-right: 17px;
     box-sizing: content-box;
 }
