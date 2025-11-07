@@ -27,7 +27,7 @@ function Series_Picture(props) {
 
     return (
         <>
-            <div id='series_picture_container'>
+            <div id='series_picture_container' onClick={props.handleClickSeries}>
                 <img src={seriesData.image.original}></img>
                 {props.displayFavBtn && <button onClick={props.handleClickFavorite}>
                     <svg id='icon_btn_favorite' xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill={props.isFavorite ? "lightcoral" : "gray"} className="bi bi-heart-fill" viewBox="0 0 16 16">

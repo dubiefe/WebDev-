@@ -1,10 +1,14 @@
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 
 import './App.css'
 import Search from './search_component/search'
 import Favorites from './favorites_component/favorites';
 
 function App() {
+
+    // Variable for the details of the series
+    const [ displayedSeriesId, setDisplaySeriesId ] = useState();
+    const [ displaySeries, setDisplaySeries ] = useState(false);
 
     // Initialize favorites
     const [favorites, setFavorites] = useState(() => {
@@ -29,10 +33,17 @@ function App() {
         }
     }
 
+    // Method to display the details of a series
+    function handleClickSeries(id) {
+        setDisplaySeriesId(id);
+        setDisplaySeries(true);
+    }
+
     return (
       <>
-        <Favorites favorites={favorites} handleClickFavorite={handleClickFavorite}/>
-        <Search favorites={favorites} handleClickFavorite={handleClickFavorite}/>
+        <Favorites favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries}/>
+        <Search favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries}/>
+        {displaySeries && <p>test</p>}
       </>
     )
 }

@@ -10,7 +10,7 @@ function Favorites(props) {
           { props.favorites.map((favorite) => {
             return(
               <>
-                <Series_Picture displayFavBtn={false} series_id={String(favorite)}/>
+                <Series_Picture displayFavBtn={false} series_id={String(favorite)} handleClickSeries={() => props.handleClickSeries(String(favorite))}/>
               </>
             )
           })}
