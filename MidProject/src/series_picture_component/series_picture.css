@@ -11,6 +11,12 @@
     margin: 0;
 }
 
+#series_picture_container button {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
 #series_picture_container img {
     width: 100%;
     height: 100%;

@@ -1,10 +1,7 @@
 button {
-    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    right: 0;
-    top: 0;
     background-color: white;
     width: 35px;
     height: 35px;

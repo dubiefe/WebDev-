@@ -45,6 +45,7 @@ function App() {
         <Favorites favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries}/>
         <Search favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries}/>
         {displaySeries && <Series_Details series_id={displayedSeriesId} isFavorite={favorites.includes(displayedSeriesId)} handleClickFavorite={handleClickFavorite}/>}
+        {!displaySeries && <div id="default_container"></div>}
       </>
     )
 }
