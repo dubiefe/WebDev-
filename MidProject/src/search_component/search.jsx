@@ -68,7 +68,7 @@ function Search(props) {
                         )
                     })
                   ) : (
-                    <p>Loading Image...</p>
+                    <p></p>
                   )}
               </div>
             </div>

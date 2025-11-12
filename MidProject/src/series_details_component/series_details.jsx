@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import './series_details.css'
+import x_icon from "../assets/x.svg"
+
 import Favorite_Button from '../favorite_button_component/favorite_button';
 
 function Series_Details(props) {
@@ -74,6 +76,7 @@ function Series_Details(props) {
     return (
         <>
             <div id='series_details_container'>
+                <img src={x_icon} alt="close_details"/>
                 <div id='series_name_favorite_container'>
                     <h2>{seriesData.name}</h2>
                     <Favorite_Button isFavorite={props.isFavorite} handleClickFavorite={() => props.handleClickFavorite(String(seriesData.id))}/>
