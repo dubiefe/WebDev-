@@ -45,7 +45,6 @@
     grid-gap: 2vh;
     justify-content: space-between;
     box-sizing: content-box;
-    min-height: 40vh;
 }
 
 #result_container > div {
@@ -56,5 +55,8 @@
 @media (max-width: 1000px) {
   #search_container {
     width: 80%;
+  }
+  #result_container {
+    min-height: 40vh;
   }
 }
