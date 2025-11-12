@@ -40,11 +40,25 @@ function App() {
         setDisplaySeries(true);
     }
 
+    function handleClickClose() {
+        setDisplaySeriesId();
+        setDisplaySeries(false);
+    }
+
     return (
       <>
-        <Favorites favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries} displayedSeriesId={displayedSeriesId}/>
-        <Search favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries} displayedSeriesId={displayedSeriesId}/>
-        {displaySeries && <Series_Details series_id={displayedSeriesId} isFavorite={favorites.includes(displayedSeriesId)} handleClickFavorite={handleClickFavorite}/>}
+        <Favorites favorites={favorites} 
+                   handleClickFavorite={handleClickFavorite} 
+                   handleClickSeries={handleClickSeries} 
+                   displayedSeriesId={displayedSeriesId}/>
+        <Search favorites={favorites} 
+                handleClickFavorite={handleClickFavorite} 
+                handleClickSeries={handleClickSeries} 
+                displayedSeriesId={displayedSeriesId}/>
+        {displaySeries && <Series_Details series_id={displayedSeriesId} 
+                                          isFavorite={favorites.includes(displayedSeriesId)} 
+                                          handleClickFavorite={handleClickFavorite} 
+                                          handleClickClose={() => {handleClickClose()}}/>}
         {!displaySeries && <div id="default_container"></div>}
       </>
     )

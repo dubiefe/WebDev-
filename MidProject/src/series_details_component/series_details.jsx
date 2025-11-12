@@ -76,7 +76,7 @@ function Series_Details(props) {
     return (
         <>
             <div id='series_details_container'>
-                <img src={x_icon} alt="close_details"/>
+                <img src={x_icon} alt="close_details" onClick={props.handleClickClose}/>
                 <div id='series_name_favorite_container'>
                     <h2>{seriesData.name}</h2>
                     <Favorite_Button isFavorite={props.isFavorite} handleClickFavorite={() => props.handleClickFavorite(String(seriesData.id))}/>

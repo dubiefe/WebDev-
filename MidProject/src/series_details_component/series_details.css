@@ -17,6 +17,7 @@
     width: 6vh;
     top: 0;
     right: 0;
+    cursor: pointer;
 }
 
 #series_details_container h2 {
