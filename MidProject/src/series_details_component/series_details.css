@@ -36,7 +36,6 @@
     height: fit-content;
     display: flex;
     gap: 5%;
-
 }
 
 #series_main_image_info_container img {
@@ -46,4 +45,21 @@
 
 #series_other_info_container {
     overflow: auto;
+}
+
+@media (max-width: 1000px) {
+  #series_details_container {
+    width: 90%;
+    height: 50vh;
+    position: fixed;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+ }
+ #series_main_image_info_container {
+    width: 100%;
+    height: 45%;
+ }
+ #series_main_image_info_container img {
+    width: 15%;
+ } 
 }

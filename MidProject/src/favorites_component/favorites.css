@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 2vh;
+    box-sizing: border-box;
 }
 
 #favorites_container h2 {
@@ -28,4 +29,16 @@
 #favorites_details_container > div {
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 1000px) {
+  #favorites_container {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 52vh;
+  }
+  #favorites_details_container {
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    overflow-y: hidden;
+  }
 }
