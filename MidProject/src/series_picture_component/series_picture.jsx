@@ -28,7 +28,7 @@ function Series_Picture(props) {
 
     return (
         <>
-            <div id='series_picture_container' onClick={props.handleClickSeries}>
+            <div id='series_picture_container' onClick={props.handleClickSeries} style={String(props.displayedSeriesId) === String(seriesData.id) ? {border:"3px solid white", margin:"0"} : {}}>
                 <img src={seriesData.image.original}></img>
                 {props.displayFavBtn && <Favorite_Button isFavorite={props.isFavorite} handleClickFavorite={() => props.handleClickFavorite(String(seriesData.id))}/>}
             </div>

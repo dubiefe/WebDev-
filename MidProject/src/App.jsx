@@ -42,8 +42,8 @@ function App() {
 
     return (
       <>
-        <Favorites favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries}/>
-        <Search favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries}/>
+        <Favorites favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries} displayedSeriesId={displayedSeriesId}/>
+        <Search favorites={favorites} handleClickFavorite={handleClickFavorite} handleClickSeries={handleClickSeries} displayedSeriesId={displayedSeriesId}/>
         {displaySeries && <Series_Details series_id={displayedSeriesId} isFavorite={favorites.includes(displayedSeriesId)} handleClickFavorite={handleClickFavorite}/>}
         {!displaySeries && <div id="default_container"></div>}
       </>

@@ -62,7 +62,8 @@ function Search(props) {
                                                   series_id={String(series.show.id)} 
                                                   isFavorite={props.favorites.includes(String(series.show.id))} 
                                                   handleClickFavorite={props.handleClickFavorite} 
-                                                  handleClickSeries={() => props.handleClickSeries(String(series.show.id))}/>}
+                                                  handleClickSeries={() => props.handleClickSeries(String(series.show.id))}
+                                                  displayedSeriesId={props.displayedSeriesId}/>}
                           </>
                         )
                     })
