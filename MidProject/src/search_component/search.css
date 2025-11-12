@@ -58,5 +58,6 @@
   }
   #result_container {
     min-height: 40vh;
+    grid-template-columns: 30% 30% 30%;
   }
 }
