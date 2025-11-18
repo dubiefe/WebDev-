@@ -57,7 +57,7 @@
     width: 80%;
   }
   #result_container {
-    min-height: 40vh;
+    padding-bottom: 10vh;
     grid-template-columns: 30% 30% 30%;
   }
 }
